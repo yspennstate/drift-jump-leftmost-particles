@@ -36,7 +36,7 @@ In Aldous's drift-jump process, $k$ particles $0<X_1<\dots<X_k$ move to the righ
 
 \section{Introduction}\label{sec:intro}
 
-Hammersley's process \cite{Ham72,AD95} has particles on $(0,\infty)$ which are moved by the events of a rate-one space-time Poisson process on $(0,\infty)\times(0,\infty)$: when an event occurs at $(x_0,t_0)$, the closest particle to the right of $x_0$ is moved to $x_0$. Aldous \cite{Ald18} poses the following problem about a variant that keeps track of the leftmost particles. There are $k$ particles at positions $0<X_1(t)<\dots<X_k(t)$. Events occur as a rate-one space-time Poisson process on $(0,\infty)\times(0,\infty)$; when an event occurs at $(x_0,t_0)$, the closest particle (if any) to the right of $x_0$ is moved to $x_0$. Between events the particles move to the right according to
+Hammersley's process \cite{Ham72,AD95,CG05} has particles on $(0,\infty)$ which are moved by the events of a rate-one space-time Poisson process on $(0,\infty)\times(0,\infty)$: when an event occurs at $(x_0,t_0)$, the closest particle to the right of $x_0$ is moved to $x_0$. Aldous \cite{Ald18} poses the following problem about a variant that keeps track of the leftmost particles. There are $k$ particles at positions $0<X_1(t)<\dots<X_k(t)$. Events occur as a rate-one space-time Poisson process on $(0,\infty)\times(0,\infty)$; when an event occurs at $(x_0,t_0)$, the closest particle (if any) to the right of $x_0$ is moved to $x_0$. Between events the particles move to the right according to
 \[
 \frac{\mathrm dX_i(t)}{\mathrm dt}=X_i(t).
 \]
@@ -95,7 +95,7 @@ and for $0\le s\le T$,
 \end{equation}
 \end{corollary}
 
-By \eqref{eq:surv}, the identity \eqref{eq:gessel} is Gessel's formula for the Poissonized longest increasing subsequence \cite{Ges90}, which is the starting point of \cite{BDJ99}.
+By \eqref{eq:surv}, the identity \eqref{eq:gessel} is Gessel's formula for the Poissonized longest increasing subsequence \cite{Ges90}, which is the starting point of \cite{BDJ99}; for the Plancherel measure see also \cite{Joh01}.
 
 \begin{corollary}\label{cor:c}
 For $i\ge1$, with $X_0=0$,
@@ -354,12 +354,16 @@ J.~Baik, P.~Deift and K.~Johansson, On the distribution of the length of the lon
 \bibitem{BOO00}
 A.~Borodin, A.~Okounkov and G.~Olshanski, Asymptotics of Plancherel measures for symmetric groups, \emph{J. Amer. Math. Soc.} \textbf{13} (2000), 481--515.
 
+\bibitem{CG05}
+E.~Cator and P.~Groeneboom, Hammersley's process with sources and sinks, \emph{Ann. Probab.} \textbf{33} (2005), 879--903.
 \bibitem{Ges90}
 I.~M. Gessel, Symmetric functions and P-recursiveness, \emph{J. Combin. Theory Ser. A} \textbf{53} (1990), 257--285.
 
 \bibitem{Ham72}
 J.~M. Hammersley, A few seedlings of research, in \emph{Proc. Sixth Berkeley Symp. Math. Statist. Probab.}, Vol.~1, Univ. California Press, 1972, 345--394.
 
+\bibitem{Joh01}
+K.~Johansson, Discrete orthogonal polynomial ensembles and the Plancherel measure, \emph{Ann. of Math. (2)} \textbf{153} (2001), 259--296.
 \bibitem{OR03}
 A.~Okounkov and N.~Reshetikhin, Correlation function of Schur process with application to local geometry of a random 3-dimensional Young diagram, \emph{J. Amer. Math. Soc.} \textbf{16} (2003), 581--603.
 
