@@ -149,7 +149,7 @@ By Lemma~\ref{lem:cells} the right side tends to infinity as $y\to\infty$ almost
 \begin{equation}\label{eq:Yi}
 Y_i(u)=\inf\{y>0:\mathcal L((0,y]\times(0,u])\ge i\}.
 \end{equation}
-The set $S_u$ is constant in $u$ between points of $\Pi$, and at a point $(v,u)$ the smallest element of $S_u$ larger than $v$ is replaced by $v$. If $v<Y_k$ that element is among $Y_1,\dots,Y_k$, and it is the one nearest to the right of $v$; if $v>Y_k$ the first $k$ elements do not change. So $(Y_1(u),\dots,Y_k(u))$ is the static process. Define
+The whole set $S_u$ changes on a dense set of times, so its dynamics are described through finitely many elements on bounded time intervals. Fix $k$ and $0<u_0<u_1$. Each $Y_i(u)$ is nonincreasing in $u$, so on $[u_0,u_1]$ a point of $\Pi$ with first coordinate larger than $Y_k(u_0)$ does not change $Y_1,\dots,Y_k$, and the rectangle $(0,Y_k(u_0)]\times(u_0,u_1]$ contains finitely many points of $\Pi$. Between these points $(Y_1(u),\dots,Y_k(u))$ is constant, and at such a point $(v,u)$ the smallest element of $S_{u-}$ larger than $v$ is replaced by $v$: if $v<Y_k(u-)$ that element is among $Y_1(u-),\dots,Y_k(u-)$, and it is the one nearest to the right of $v$; if $v>Y_k(u-)$ the first $k$ elements do not change. By \eqref{eq:count} these local descriptions agree on overlapping intervals, and taking $k$, $u_0$ and $u_1$ in countable sets shows that $(Y_1(u),\dots,Y_k(u))_{u>0}$ is the static process. Define
 \[
 X_i(t)=e^{t}\,Y_i(e^t),\qquad t\in\mathbb R .
 \]
@@ -184,7 +184,7 @@ By Lemma~\ref{lem:stat}, under $\pi$, $X_i=\inf\{y:\mathcal L((0,y]\times(0,1])\
 \end{proof}
 
 \begin{remark}\label{rem:AD93}
-In \cite{AD93} the cards are labelled by their values and $B(i)$ is the limiting value-rank of the top of the $i$-th pile. In the plane this corresponds to reading the points of $\Pi$ in $(0,\infty)\times(0,1]$ in the order of the second coordinate, as in \eqref{eq:Yi}, while \eqref{eq:rep} reads them in the order of the first coordinate. Both read the same chains, which is why $\#\{i:B(i)\le n\}$ has the law of $\ell_n$ jointly in $n$; for a permutation this is the symmetry between $\pi$ and $\pi^{-1}$, that is, between the insertion and the recording tableau.
+In \cite{AD93} the cards are labelled by their values and $B(i)$ is the limiting value-rank of the top of the $i$-th pile. In the plane this corresponds to reading the points of $\Pi$ in $(0,y]\times(0,1]$, for a fixed $y$, in the order of the second coordinate, as in \eqref{eq:Yi}, while \eqref{eq:rep} reads them in the order of the first coordinate; the whole strip has no first point in the order of the second coordinate, so the comparison is made in these finite restrictions. Both orders read the same chains. With $y=\Gamma_n$ for all $n$ at once, the restrictions are nested and the two readings agree on each of them, which is why $\#\{i:B(i)\le n\}$ has the law of $\ell_n$ jointly in $n$ and not only for each $n$ separately; for a permutation this is the symmetry between $\pi$ and $\pi^{-1}$, that is, between the insertion and the recording tableau.
 \end{remark}
 
 \section{The joint law of the shapes}\label{sec:shapes}
@@ -221,7 +221,7 @@ Let $\nu,\mu$ be partitions with at most $d$ parts, with positions $z_1<\dots<z_
 \end{lemma}
 
 \begin{proof}
-Reversing the order of both the rows and the columns does not change the determinant, so we may use the positions $y_i=\mu_i+d-i$, $z_j=\nu_j+d-j$ in decreasing order. Every nonzero term of the expansion is $\pm\prod_iu^{y_i-z_{\pi(i)}}/(y_i-z_{\pi(i)})!$, and $\sum_i(y_i-z_{\pi(i)})=h$, so the determinant is $u^h\det[1/(\mu_i-\nu_j-i+j)!]$ with $1/n!=0$ for $n<0$. If $\nu\subseteq\mu$ the latter is $f^{\mu/\nu}/h!$ by Aitken's formula \cite{Ait43}, \cite[Section~7.16]{Sta99}. If $\nu_i>\mu_i$ for some $i$, then for $i'\ge i\ge j$ we have $\mu_{i'}-\nu_j-i'+j\le\mu_i-\nu_i<0$, so the rows $i,\dots,d$ vanish in the columns $1,\dots,i$, and the determinant is $0$.
+At $u=0$ the matrix is $[\mathbf 1\{y_i=z_j\}]$, with determinant $1$ if the two position sets are equal, that is if $\mu=\nu$, and $0$ otherwise; this is the statement with $u^0=1$. Let $u>0$. Reversing the order of both the rows and the columns does not change the determinant, so we may use the positions $y_i=\mu_i+d-i$, $z_j=\nu_j+d-j$ in decreasing order. Every nonzero term of the expansion is $\pm\prod_iu^{y_i-z_{\pi(i)}}/(y_i-z_{\pi(i)})!$, and $\sum_i(y_i-z_{\pi(i)})=h$, so the determinant is $u^h\det[1/(\mu_i-\nu_j-i+j)!]$ with $1/n!=0$ for $n<0$. If $\nu\subseteq\mu$ the latter is $f^{\mu/\nu}/h!$ by Aitken's formula \cite{Ait43}, \cite[Section~7.16]{Sta99}. If $\nu_i>\mu_i$ for some $i$, then for $i'\ge i\ge j$ we have $\mu_{i'}-\nu_j-i'+j\le\mu_i-\nu_i<0$, so the rows $i,\dots,d$ vanish in the columns $1,\dots,i$, and the determinant is $0$.
 \end{proof}
 
 \section{Proof of Theorem~\ref{thm:det}}\label{sec:det}
@@ -268,8 +268,9 @@ because $\det(I-W\tilde Q)=1$, $W\tilde Q$ being strictly lower triangular. Thes
 
 \emph{Removing the cutoff.} As $\Lambda\to\infty$ the events $\{\max y^r\le\Lambda\}$ increase to the whole space, so the probabilities increase to the probability of the event. With $y=i+n$, $\sum_yp_1(y,i)p_T(y,j)=\sum_{n}T^{i+n-j}/(n!(i+n-j)!)=E_T(j,i)$, and similarly $\sum_yp_1(y,i)p_{u}(y,z)=E_u(z,i)$; the series converge, so $\tilde A\to A^{\top}$ and $\tilde G\to G^{\top}$, while $\tilde F=F^{\top}$ and $\tilde Q=Q^{\top}$. The determinant has finitely many entries, so it converges to
 \[
-\det\begin{pmatrix}A^{\top}&G^{\top}\\-F^{\top}&-Q^{\top}\end{pmatrix}=\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}^{\top}=\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}.
+\det\begin{pmatrix}A^{\top}&G^{\top}\\-F^{\top}&-Q^{\top}\end{pmatrix}=\det\Bigl(S\begin{pmatrix}A&F\\-G&-Q\end{pmatrix}^{\top}S\Bigr)=\det\begin{pmatrix}A&F\\-G&-Q\end{pmatrix},\qquad S=\begin{pmatrix}I_d&0\\0&-I_q\end{pmatrix},
 \]
+since conjugation by $S$ changes the sign of both off-diagonal blocks and $(\det S)^2=1$.
 This proves \eqref{eq:det}. Finally, for $u>0$ and $a\ge b$, $E_u(a,b)=\sum_nu^n/(n!(n+a-b)!)=u^{-(a-b)/2}I_{a-b}(2\sqrt u)$ by the series $I_\nu(x)=\sum_n(x/2)^{2n+\nu}/(n!(n+\nu)!)$; for $a<b$ substitute $n=n'+b-a$. \qed
 
 \section{Proofs of the corollaries}\label{sec:cor}
@@ -287,7 +288,11 @@ with determinant $I_0(2\sqrt{T-s})$. The cases $s=0$ and $s=T$ follow by the red
 \end{proof}
 
 \begin{proof}[Proof of Corollary~\ref{cor:c}]
-By \eqref{eq:rep}, $X_i-X_{i-1}=\Gamma_{\tau_i}-\Gamma_{\tau_{i-1}}$ (with $\tau_0=0$, $\Gamma_0=0$) is a sum of $\tau_i-\tau_{i-1}$ independent standard exponential variables, independent of $\tau$, so $\E(X_i-X_{i-1})=\E(\tau_i-\tau_{i-1})$. Since $\ell_n$ increases by at most one at each step, $\tau_i-\tau_{i-1}=\#\{n\ge0:\ell_n=i-1\}$, whose mean is $\sum_n\Pp(\ell_n=i-1)$; this is $c(i)=\sum_{k\ge i}\Pp(L_{k-1}=i-1)$ of \cite[Proposition~9]{AD99}, where $L_n$ is the longest increasing subsequence of a uniform random permutation of $n$, and $c(1)=1$, $c(2)=e-1$ there. The sum is finite: $\Pp(\ell_n\le i-1)$ decays geometrically in $n$ by Lemma~\ref{lem:cells} after Poissonization, or directly. Finally $\E X_i=\int_0^\infty\Pp(X_i>s)\dd s$, and \eqref{eq:gessel} gives the integrand.
+By \eqref{eq:rep}, $X_i-X_{i-1}=\Gamma_{\tau_i}-\Gamma_{\tau_{i-1}}$ (with $\tau_0=0$, $\Gamma_0=0$) is a sum of $\tau_i-\tau_{i-1}$ independent standard exponential variables, independent of $\tau$, so $\E(X_i-X_{i-1})=\E(\tau_i-\tau_{i-1})$. Since $\ell_n$ increases by at most one at each step, $\tau_i-\tau_{i-1}=\#\{n\ge0:\ell_n=i-1\}$, whose mean is $\sum_n\Pp(\ell_n=i-1)$; this is $c(i)=\sum_{k\ge i}\Pp(L_{k-1}=i-1)$ of \cite[Proposition~9]{AD99}, where $L_n$ is the longest increasing subsequence of a uniform random permutation of $n$, and $c(1)=1$, $c(2)=e-1$ there. The sum is finite. The variable $\ell_n$ has the law of the longest increasing chain among $n$ independent uniform points of the unit square. Divide the square into an $m\times m$ grid with $m\ge i$; points in distinct diagonal cells form a chain, so if $\ell_n\le i-1$ then at least $m-i+1$ diagonal cells are empty, and
+\[
+\Pp(\ell_n\le i-1)\le\binom{m}{m-i+1}\Bigl(1-\frac{m-i+1}{m^2}\Bigr)^n,
+\]
+which decays geometrically in $n$. Finally $\E X_i=\int_0^\infty\Pp(X_i>s)\dd s$, and \eqref{eq:gessel} gives the integrand.
 \end{proof}
 
 \section{Computations}\label{sec:comp}
@@ -324,7 +329,7 @@ has a management role at Convex Nexus Capital. These entities are included
 in the funding declaration above.
 
 \section*{Declaration of generative AI and AI-assisted technologies}
-The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 11 October 2026 an agent running in OpenAI's Codex (GPT-6.1 Sol) obtained Theorem~\ref{thm:det} and its proof; two further Codex agents checked the proof, and a Claude agent (Anthropic) checked the one- and two-particle cases with a simulation. On 16 October 2026 Claude Opus~5.5, working in Claude Code, checked the proof line by line, wrote the proofs of Theorem~\ref{thm:rep} and Proposition~\ref{prop:conv} in the form given here, and wrote the computer checks, the Lean file and the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. On 11 October 2026 an agent running in OpenAI's Codex (GPT-6.1 Sol) obtained Theorem~\ref{thm:det} and its proof; two further Codex agents checked the proof, and a Claude agent (Anthropic) checked the one- and two-particle cases with a simulation. On 16 October 2026 Claude Opus~5.5, working in Claude Code, checked the proof line by line, wrote the proofs of Theorem~\ref{thm:rep} and Proposition~\ref{prop:conv} in the form given here, and wrote the computer checks, the Lean file and the paper. In November 2026 a Codex agent (OpenAI, GPT-6.1) refereed the paper, checking every result with its own exact computations and simulations. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \section*{Data availability}
 No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/drift-jump-leftmost-particles}.
